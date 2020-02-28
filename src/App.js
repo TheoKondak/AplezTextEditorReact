@@ -1,18 +1,34 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Staticelements from './Staticelements/staticelements';
+import axios from 'axios';
+
 
 class App extends Component {
+  state = {
+    selectedFile: null;
+  }
+ 
+ 
+  fileSelectedHandler = event => {
+    this.setState({
+      selectedFile: event.target.files[0];
+    })
+  }
+  
+
+  fileUploadHandler = () => {
+    axios.post('');
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        
+       <Staticelements></Staticelements>
+      <input type='file' onChange={this.fileSelectedHandler} />
+      <button onClick={this.fileUploadHandler}>Upload</button>
       </div>
     );
   }
