@@ -7,13 +7,13 @@ import axios from 'axios';
 
 class App extends Component {
   state = {
-    selectedFile: null;
+    selectedFile: null
   }
  
  
   fileSelectedHandler = event => {
     this.setState({
-      selectedFile: event.target.files[0];
+      selectedFile: event.target.files[0]
     })
   }
   
