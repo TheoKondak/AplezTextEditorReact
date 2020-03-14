@@ -1,0 +1,18 @@
+.containerDropzone{
+    width: 400px;
+    height: 100px;
+    margin: 0 auto;
+    border: 2px dashed #ccc;
+    color: #ccc;
+    line-height: 100px;
+    text-align: center;
+}
+
+.containerDropzone p{
+margin: 0;
+}
+
+.dropzone.dragover{
+    border-color: #000000;
+    color: #000;
+}
